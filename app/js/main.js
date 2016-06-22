@@ -6,14 +6,18 @@ console.log('Hello, World');
 
 let didScroll = false;
 let lastScrollTop;
+let st = $(window).scrollTop();
 let windowHeight = $(window).innerHeight();
 let $yellow = $('#yellow').offset().top - windowHeight;
 let $orange = $('#orange').offset().top - windowHeight;
 let $red    = $('#red').offset().top - windowHeight;
 let $purple = $('#purple').offset().top - windowHeight;
 let $blue   = $('#blue').offset().top - windowHeight;
+let $body   = $('body');
 
-//code to run when scrolling
+/*
+*  Scroll Functions
+*/
 
 function hasScrolled() {
 
@@ -23,27 +27,27 @@ function hasScrolled() {
   st = $(window).scrollTop();
 
   if (st < $yellow) {
-    $('body').css('background-color', '#e6e6e6');
+    $body.css('background-color', '#e6e6e6');
   }
 
   if (st > $yellow && st < $orange) {
-    $('body').css('background-color', '#F8F800');
+    $body.css('background-color', '#F8F800');
   }
 
   if (st > $orange && st < $red) {
-    $('body').css('background-color', '#FED525');
+    $body.css('background-color', '#FF9900');
   }
 
   if (st > $red && st < $purple) {
-    $('body').css('background-color', '#FD3A3C');
+    $body.css('background-color', '#FD3A3C');
   }
 
   if (st > $purple && st < $blue) {
-    $('body').css('background-color', '#DCC3E0');
+    $body.css('background-color', '#DCC3E0');
   }
 
   if (st > $blue) {
-    $('body').css('background-color', '#ADD8E6');
+    $body.css('background-color', '#4E99FF');
   }
 
   if (Math.abs(lastScrollTop - st) <= 10) {
@@ -57,12 +61,12 @@ function hasScrolled() {
 
     // scrolling down
 
-    return;
+    $('.navbar-fixed-top').css('top', '-70px');
   } else if (st + $(window).height() < $(document).height()) {
 
     // scrolling up
 
-    return;
+    $('.navbar-fixed-top').css('top', 0);
   }
 
   //reset scroll position
@@ -80,4 +84,23 @@ setInterval(function () {
 
 $(window).scroll(function () {
   didScroll = true;
+});
+
+/*
+* Helper Text Function
+*/
+
+$('.helper-text').each(function () {
+  console.log(this);
+  $(this)
+    .closest('.helper-text-box')
+    .mouseenter(() => {
+      $(this).removeClass('hidden');
+    })
+    .mouseleave(() => {
+      $(this).addClass('hidden');
+    })
+    .mousemove((e) => {
+      $(this).css({'top': e.pageY , 'left': e.pageX + 20})
+    });
 });

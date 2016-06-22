@@ -29,3 +29,15 @@ body {
   -o-transition: background-color 0.3s ease;  
   transition: background-color 0.3s ease;  
 }
+
+#page_content_wrapper {
+  padding-top: 70px;
+}
+
+.helper-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: white;
+  text-decoration: underline;
+}
