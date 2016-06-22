@@ -23,3 +23,9 @@ $secondary: #666;
 @import 'partials/header';
 @import 'partials/modal';
 @import 'partials/footer';
+
+body {
+  -webkit-transition: background-color 0.3s ease;  
+  -o-transition: background-color 0.3s ease;  
+  transition: background-color 0.3s ease;  
+}
