@@ -101,6 +101,6 @@ $('.helper-text').each(function () {
       $(this).addClass('hidden');
     })
     .mousemove((e) => {
-      $(this).css({'top': e.pageY , 'left': e.pageX + 20})
+      $(this).css({ top: e.pageY + 10, left: e.pageX + 20 });
     });
 });
