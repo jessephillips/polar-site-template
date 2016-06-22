@@ -2,8 +2,6 @@ import _ from 'underscore';
 import moment from 'moment';
 import 'bootstrap-sass';
 
-console.log('Hello, World');
-
 let didScroll = false;
 let lastScrollTop;
 let st = $(window).scrollTop();
@@ -69,6 +67,19 @@ function hasScrolled() {
     $('.navbar-fixed-top').css('top', 0);
   }
 
+  if (st >= $(document).height() - $(window).innerHeight() && $('#pushed').length === 0) {
+    console.log('bottom');
+    setTimeout(function () {
+      if (st >= $(document).height() - $(window).innerHeight()) {
+        $('body').append(`
+          <div id="pushed" style="height: 500px; background-color: #666">
+            <h1 class="text-center">Force Pull</h1>
+          </div>
+        `);
+      }
+    }, 500);
+  }
+
   //reset scroll position
 
   lastScrollTop = st;
@@ -91,7 +102,6 @@ $(window).scroll(function () {
 */
 
 $('.helper-text').each(function () {
-  console.log(this);
   $(this)
     .closest('.helper-text-box')
     .mouseenter(() => {
