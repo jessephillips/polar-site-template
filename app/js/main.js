@@ -7,18 +7,31 @@ let lastScrollTop;
 let st = $(window).scrollTop();
 let windowHeight = $(window).innerHeight();
 let bottomedOut = false;
-let colorDivs = [];
-
-// let $yellow = $('#yellow').offset().top - (windowHeight / 1.5);
-// let $orange = $('#orange').offset().top - (windowHeight / 1.5);
-// let $red    = $('#red').offset().top - (windowHeight / 1.5);
-// let $purple = $('#purple').offset().top - (windowHeight / 1.5);
-// let $blue   = $('#blue').offset().top - (windowHeight / 1.5);
-// let $body   = $('body');
+let chameleonDivs = [];
+let originalBackground = $('body').css('background');
 
 /*
 *  Scroll Functions
 */
+let changeBackground = function (st) {
+
+  var foo = false;
+
+  $.each(chameleonDivs, function () {
+    if (st >= this.start && st <= this.end) {
+      $('body').css({
+        'background-image': this.backgroundImage,
+        'background-color': this.backgroundColor,
+      });
+      foo = true;
+    }
+  });
+
+  if (foo === false) {
+    $('body').css('background', originalBackground);
+  }
+
+};
 
 function hasScrolled() {
 
@@ -27,38 +40,16 @@ function hasScrolled() {
   var st;
   st = $(window).scrollTop();
 
-  // if (st < $yellow) {
-  //   $body.css('background-color', '#e6e6e6');
-  // }
-
-  // if (st > $yellow && st < $orange) {
-  //   $body.css('background-color', '#F8F800');
-  // }
-
-  // if (st > $orange && st < $red) {
-  //   $body.css('background-color', '#FF9900');
-  // }
-
-  // if (st > $red && st < $purple) {
-  //   $body.css('background-color', '#FD3A3C');
-  // }
-
-  // if (st > $purple && st < $blue) {
-  //   $body.css('background-color', '#DCC3E0');
-  // }
-
-  // if (st > $blue) {
-  //   $body.css('background-color', '#4E99FF');
-  // }
+  changeBackground(st);
 
   if (Math.abs(lastScrollTop - st) <= 10) {
 
-    //didnt scroll enough, do nothing and break function
+    // didn't scroll far enough, stop function
 
     return;
   }
 
-  if (st > lastScrollTop && st > 15) {
+  if (st > lastScrollTop && st > 70) {
 
     // scrolling down
 
@@ -74,9 +65,9 @@ function hasScrolled() {
 
     //not working
 
-    if (bottomedOut === false) {
-      $(window).scroll(0, -30);
-    }
+    // if (bottomedOut === false) {
+    //   $(window).scroll(0, -30);
+    // }
 
     setTimeout(function () {
       if (st >= $(document).height() - $(window).innerHeight() && $('#foo').length === 0) {
@@ -125,17 +116,31 @@ $('.helper-text').each(function () {
     });
 });
 
+let ChameleonObject = function (scopedThis) {
+  var chameleonSection = {
+    start: $(scopedThis).offset().top - (windowHeight / 1.5),
+    end: ($(scopedThis).offset().top - (windowHeight / 1.5)) + $(scopedThis).outerHeight(),
+    backgroundColor: $(scopedThis).data('background') || '#e6e6e6',
+    type: $(scopedThis).data('type') || undefined,
+  };
+
+  if (chameleonSection.type === 'color') {
+    chameleonSection.backgroundImage = 'none';
+  }
+
+  if (chameleonSection.type === 'image') {
+    chameleonSection.backgroundColor = '#666';
+    chameleonSection.backgroundImage = $(scopedThis).data('background');
+  }
+
+  return chameleonSection;
+};
+
 $(document).ready(function () {
-  $('.background-shift').each(function () {
-    if ($(this).data('type') === 'color') {
+  $('.chameleon').each(function (index, element) {
 
-      //get top and bottom of div, set background color on scroll thru
-      colorDivs.push({
-        background: $(this).data('background');
-        start: $(this).offset().top - (windowHeight / 1.5),
-      });
-      console.log(colorDivs);
-    }
+    //get top of div + background from data attributes
 
+    chameleonDivs.push(new ChameleonObject(this));
   });
 });
