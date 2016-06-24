@@ -6,12 +6,15 @@ let didScroll = false;
 let lastScrollTop;
 let st = $(window).scrollTop();
 let windowHeight = $(window).innerHeight();
-let $yellow = $('#yellow').offset().top - windowHeight;
-let $orange = $('#orange').offset().top - windowHeight;
-let $red    = $('#red').offset().top - windowHeight;
-let $purple = $('#purple').offset().top - windowHeight;
-let $blue   = $('#blue').offset().top - windowHeight;
-let $body   = $('body');
+let bottomedOut = false;
+let colorDivs = [];
+
+// let $yellow = $('#yellow').offset().top - (windowHeight / 1.5);
+// let $orange = $('#orange').offset().top - (windowHeight / 1.5);
+// let $red    = $('#red').offset().top - (windowHeight / 1.5);
+// let $purple = $('#purple').offset().top - (windowHeight / 1.5);
+// let $blue   = $('#blue').offset().top - (windowHeight / 1.5);
+// let $body   = $('body');
 
 /*
 *  Scroll Functions
@@ -24,29 +27,29 @@ function hasScrolled() {
   var st;
   st = $(window).scrollTop();
 
-  if (st < $yellow) {
-    $body.css('background-color', '#e6e6e6');
-  }
+  // if (st < $yellow) {
+  //   $body.css('background-color', '#e6e6e6');
+  // }
 
-  if (st > $yellow && st < $orange) {
-    $body.css('background-color', '#F8F800');
-  }
+  // if (st > $yellow && st < $orange) {
+  //   $body.css('background-color', '#F8F800');
+  // }
 
-  if (st > $orange && st < $red) {
-    $body.css('background-color', '#FF9900');
-  }
+  // if (st > $orange && st < $red) {
+  //   $body.css('background-color', '#FF9900');
+  // }
 
-  if (st > $red && st < $purple) {
-    $body.css('background-color', '#FD3A3C');
-  }
+  // if (st > $red && st < $purple) {
+  //   $body.css('background-color', '#FD3A3C');
+  // }
 
-  if (st > $purple && st < $blue) {
-    $body.css('background-color', '#DCC3E0');
-  }
+  // if (st > $purple && st < $blue) {
+  //   $body.css('background-color', '#DCC3E0');
+  // }
 
-  if (st > $blue) {
-    $body.css('background-color', '#4E99FF');
-  }
+  // if (st > $blue) {
+  //   $body.css('background-color', '#4E99FF');
+  // }
 
   if (Math.abs(lastScrollTop - st) <= 10) {
 
@@ -67,17 +70,24 @@ function hasScrolled() {
     $('.navbar-fixed-top').css('top', 0);
   }
 
-  if (st >= $(document).height() - $(window).innerHeight() && $('#pushed').length === 0) {
-    console.log('bottom');
+  if (st >= $(document).height() - $(window).innerHeight() && $('#foo').length === 0) {
+
+    //not working
+
+    if (bottomedOut === false) {
+      $(window).scroll(0, -30);
+    }
+
     setTimeout(function () {
-      if (st >= $(document).height() - $(window).innerHeight()) {
+      if (st >= $(document).height() - $(window).innerHeight() && $('#foo').length === 0) {
         $('body').append(`
-          <div id="pushed" style="height: 500px; background-color: #666">
+          <div id="foo" style="height: 500px; background-color: #666">
             <h1 class="text-center">Force Pull</h1>
           </div>
         `);
+        bottomedOut = true;
       }
-    }, 500);
+    }, 1000);
   }
 
   //reset scroll position
@@ -113,4 +123,19 @@ $('.helper-text').each(function () {
     .mousemove((e) => {
       $(this).css({ top: e.pageY + 10, left: e.pageX + 20 });
     });
+});
+
+$(document).ready(function () {
+  $('.background-shift').each(function () {
+    if ($(this).data('type') === 'color') {
+
+      //get top and bottom of div, set background color on scroll thru
+      colorDivs.push({
+        background: $(this).data('background');
+        start: $(this).offset().top - (windowHeight / 1.5),
+      });
+      console.log(colorDivs);
+    }
+
+  });
 });
