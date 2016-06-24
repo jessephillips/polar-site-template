@@ -65,9 +65,11 @@ function hasScrolled() {
 
     //not working
 
-    // if (bottomedOut === false) {
-    //   $(window).scroll(0, -30);
-    // }
+    if (bottomedOut === false) {
+      window.scrollBy(0, -30);
+      bottomedOut = true;
+      console.log('bottomed');
+    }
 
     setTimeout(function () {
       if (st >= $(document).height() - $(window).innerHeight() && $('#foo').length === 0) {
@@ -76,7 +78,6 @@ function hasScrolled() {
             <h1 class="text-center">Force Pull</h1>
           </div>
         `);
-        bottomedOut = true;
       }
     }, 1000);
   }
@@ -96,24 +97,6 @@ setInterval(function () {
 
 $(window).scroll(function () {
   didScroll = true;
-});
-
-/*
-* Helper Text Function
-*/
-
-$('.helper-text').each(function () {
-  $(this)
-    .closest('.helper-text-box')
-    .mouseenter(() => {
-      $(this).removeClass('hidden');
-    })
-    .mouseleave(() => {
-      $(this).addClass('hidden');
-    })
-    .mousemove((e) => {
-      $(this).css({ top: e.pageY + 10, left: e.pageX + 20 });
-    });
 });
 
 let ChameleonObject = function (scopedThis) {
@@ -143,4 +126,31 @@ $(document).ready(function () {
 
     chameleonDivs.push(new ChameleonObject(this));
   });
+});
+
+/*
+* Sidekick Text Function
+*/
+
+$('.cursor-sidekick').each(function (index, element) {
+  var sidekick = `
+    <span class="hidden sidekick-text" id="sidekick${index}">
+      ${element.getAttribute('data-text')}
+    </span>`;
+
+  $(this)
+    .append(sidekick)
+    .mouseenter(() => {
+      $('#sidekick' + index).removeClass('hidden');
+    })
+    .mouseleave(() => {
+      $('#sidekick' + index).addClass('hidden');
+    })
+    .mousemove((e) => {
+      $('#sidekick' + index).css({ top: e.pageY + 10, left: e.pageX + 20 });
+    });
+});
+
+$('.jedi-div').each(function (index, element) {
+
 });
