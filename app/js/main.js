@@ -10,12 +10,16 @@ let bottomedOut = false;
 let chameleonDivs = [];
 let originalBackground = $('body').css('background');
 
+let setHeights = function () {
+  windowHeight = $(window).innerHeight();
+};
+
 /*
 *  Scroll Functions
 */
 let changeBackground = function (st) {
 
-  var foo = false;
+  var isChameleonDiv = false;
 
   $.each(chameleonDivs, function () {
     if (st >= this.start && st <= this.end) {
@@ -23,12 +27,12 @@ let changeBackground = function (st) {
         'background-image': this.backgroundImage,
         'background-color': this.backgroundColor,
       });
-      foo = true;
+      isChameleonDiv = true;
     }
   });
 
-  if (foo === false) {
-    $('body').css('background', originalBackground);
+  if (isChameleonDiv === false) {
+    $('body').css('background-color', '#fff');
   }
 
 };
@@ -61,25 +65,17 @@ function hasScrolled() {
     $('.navbar-fixed-top').css('top', 0);
   }
 
-  if (st >= $(document).height() - $(window).innerHeight() && $('#foo').length === 0) {
+  if (st >= $(document).height() - $(window).innerHeight()) {
 
     //not working
-
-    if (bottomedOut === false) {
-      window.scrollBy(0, -30);
-      bottomedOut = true;
-      console.log('bottomed');
-    }
+    window.scrollBy(0, -20);
+    $('#jediBump').slideDown();
 
     setTimeout(function () {
-      if (st >= $(document).height() - $(window).innerHeight() && $('#foo').length === 0) {
-        $('body').append(`
-          <div id="foo" style="height: 500px; background-color: #666">
-            <h1 class="text-center">Force Pull</h1>
-          </div>
-        `);
+      if (st >= $(document).height() - $(window).innerHeight()) {
+        $('#jediDiv').slideDown();
       }
-    }, 1000);
+    }, 200);
   }
 
   //reset scroll position
@@ -98,6 +94,8 @@ setInterval(function () {
 $(window).scroll(function () {
   didScroll = true;
 });
+
+// constructs new chameleon objects
 
 let ChameleonObject = function (scopedThis) {
   var chameleonSection = {
@@ -134,7 +132,7 @@ $(document).ready(function () {
 
 $('.cursor-sidekick').each(function (index, element) {
   var sidekick = `
-    <span class="hidden sidekick-text" id="sidekick${index}">
+    <span class="sidekick-text" id="sidekick${index}">
       ${element.getAttribute('data-text')}
     </span>`;
 
@@ -149,8 +147,4 @@ $('.cursor-sidekick').each(function (index, element) {
     .mousemove((e) => {
       $('#sidekick' + index).css({ top: e.pageY + 10, left: e.pageX + 20 });
     });
-});
-
-$('.jedi-div').each(function (index, element) {
-
 });

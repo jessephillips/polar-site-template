@@ -21,7 +21,6 @@ $secondary: #666;
 @import 'partials/bootstrap';
 @import 'partials/navbar';
 @import 'partials/header';
-@import 'partials/modal';
 @import 'partials/footer';
 
 body {
@@ -32,14 +31,32 @@ body {
   background-position-y: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-}
-
-#page_content_wrapper {
-  padding-top: 70px;
+  background-color: #FFEE79;
 }
 
 .sidekick-text {
   position: absolute;
-  color: white;
+  color: black;
   text-decoration: underline;
+}
+
+.flex {
+  display: flex;
+  &.space {
+    justify-content: space-around;
+    padding: 0px;
+    list-style-type: none;
+  }
+}
+
+.right-align {
+  text-align: right;
+}
+
+.img-responsive {
+  margin: 0 auto;
+}
+
+.row { 
+  padding: 200px 0;
 }
