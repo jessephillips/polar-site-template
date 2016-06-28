@@ -132,7 +132,9 @@ $(document).ready(function () {
 
 $('.cursor-sidekick').each(function (index, element) {
   var sidekick = `
-    <span class="sidekick-text" id="sidekick${index}">
+    <span class="sidekick-text"
+      id="sidekick${index}"
+      style="color: ${element.getAttribute('data-color')}">
       ${element.getAttribute('data-text')}
     </span>`;
 
@@ -145,6 +147,11 @@ $('.cursor-sidekick').each(function (index, element) {
       $('#sidekick' + index).addClass('hidden');
     })
     .mousemove((e) => {
-      $('#sidekick' + index).css({ top: e.pageY + 10, left: e.pageX + 20 });
+      $('#sidekick' + index).css({ top: e.pageY, left: e.pageX + 20 });
+    })
+    .click((e) => {
+      if (e.target.tagName.toLowerCase() !== 'a') {
+        window.location.href = $(this).data('href');
+      }
     });
 });

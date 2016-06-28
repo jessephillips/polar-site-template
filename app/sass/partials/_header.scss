@@ -18,6 +18,13 @@ header {
     width: 100vw;
     cursor: pointer;
   }
+  &.header-image {
+    &.greetings {
+      background-image: url('/images/greetings.png');
+      background-size: cover;
+      background-position: center center;
+    }
+  }
 }
 
 .skew {

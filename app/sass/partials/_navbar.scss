@@ -12,3 +12,14 @@
 .navbar-default {
   background: transparent;
 }
+
+.navbar-light {
+  &.navbar-default {
+    .navbar-brand {
+      color: #fff;
+    }
+    .navbar-nav > li > a {
+    color: #FFF;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+
+  <title>Greetings</title>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <%include src="partials/nav.light.html"%>
+  <%include src="partials/image.header.html"%>
+  <div class="container">
+    <section id="services" class="row">
+      <h2 class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum dolorem quaerat dolorum.</h2>
+      <div class="col-sm-6">
+       <div class="service-list">
+          <h2>service lists</h2>
+          <ul>
+            <li>service number 1</li>
+            <li>service number 2</li>
+            <li>service number 3</li>
+            <li>service number 4</li>
+            <li>service number 5</li>
+            <li>service number 6</li>
+            <li>service number 7</li>
+            <li>service number 8</li>
+          </ul>
+       </div>
+      </div>
+      <div class="col-sm-6">
+        <p>service image im guessing</p>
+      </div>
+    </section>
+    <section id="team" style="height: 200px;">
+      <h2 class="text-center">the team</h2>
+      <div class="row">      
+        <%include src="partials/teamcard.html"%>
+        <%include src="partials/teamcard.html"%>
+      </div>
+      <div class="row">       
+        <%include src="partials/teamcard.html"%>
+        <%include src="partials/teamcard.html"%>
+      </div>
+      <div class="row">      
+        <%include src="partials/teamcard.html"%>
+        <%include src="partials/teamcard.html"%>
+      </div>
+      <div class="row">      
+        <%include src="partials/teamcard.html"%>
+      </div>
+    </section>
+    <section class="col-xs-12">
+      <h2 class="text-center">load more</h2>
+    </section>
+  </div>
+  <div id="jediBump" style="height: 200px; display: none;">
+    <h1 class="text-center">Jedi Div</h1>
+  </div>
+
+  <!-- Scripts -->
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>  
+  <script src="js/main.js" async="true"></script>
+</body>
