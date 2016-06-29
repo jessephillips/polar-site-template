@@ -18,23 +18,25 @@ let setHeights = function () {
 *  Scroll Functions
 */
 let changeBackground = function (st) {
+  if (chameleonDivs.length === 0) {
+    return;
+  } else {
+    var isChameleonDiv = false;
 
-  var isChameleonDiv = false;
+    $.each(chameleonDivs, function () {
+      if (st >= this.start && st <= this.end) {
+        $('body').css({
+          'background-image': this.backgroundImage,
+          'background-color': this.backgroundColor,
+        });
+        isChameleonDiv = true;
+      }
+    });
 
-  $.each(chameleonDivs, function () {
-    if (st >= this.start && st <= this.end) {
-      $('body').css({
-        'background-image': this.backgroundImage,
-        'background-color': this.backgroundColor,
-      });
-      isChameleonDiv = true;
+    if (isChameleonDiv === false) {
+      $('body').css('background-color', '#fff');
     }
-  });
-
-  if (isChameleonDiv === false) {
-    $('body').css('background-color', '#fff');
   }
-
 };
 
 function hasScrolled() {

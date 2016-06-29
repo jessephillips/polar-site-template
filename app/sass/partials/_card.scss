@@ -1,0 +1,15 @@
+.card {
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  margin: 20px auto;
+  .card-text {
+    display: block;
+    padding: 10px 25px;
+    background-color: #000;
+    color: #FFF;
+    max-width: 75%;
+  }
+}
