@@ -9,6 +9,8 @@ let windowHeight = $(window).innerHeight();
 let bottomedOut = false;
 let chameleonDivs = [];
 let originalBackground = $('body').css('background');
+let $navbar = $('.navbar-default');
+let $navbarLight = $('.navbar-light');
 
 let setHeights = function () {
   windowHeight = $(window).innerHeight();
@@ -78,6 +80,14 @@ function hasScrolled() {
         $('#jediDiv').slideDown();
       }
     }, 200);
+  }
+
+  if ($navbarLight.length > 0) {
+    if (st >= windowHeight) {
+      $('.navbar-default').removeClass('navbar-light');
+    } else {
+      $('.navbar-default').addClass('navbar-light');
+    }
   }
 
   //reset scroll position

@@ -11,6 +11,7 @@
 
 .navbar-default {
   background: transparent;
+  border: none;
 }
 
 .navbar-light {
@@ -27,5 +28,16 @@
 .nav-inline {
   a {
     margin: 0 10px;
+  }
+}
+
+.search {
+  position: absolute;
+  top: 38%;
+  right: 10px;
+  width: 30px;
+  transform: rotate(90deg);
+  .vertical-search {
+    width: 200px;
   }
 }

@@ -1,0 +1,23 @@
+.highlight {
+  a {
+    text-decoration: underline;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to left, rgba(254,213,37, 0.7) 50%, rgba(0,0,0,0) 50%);
+    -webkit-transition: background-position 0.3s ease-out;
+    -moz-transition: background-position 0.3s ease-out;
+    transition: background-position 0.3s ease-out;
+    &:hover {
+      background-position: -100% 0;
+      color: black;
+      text-decoration: underline;
+    }
+  }
+}
+
+a {
+  text-decoration: underline;
+  &:hover {
+    color: black;
+    text-decoration: underline;
+  }
+}
