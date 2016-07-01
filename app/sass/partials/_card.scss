@@ -1,22 +1,24 @@
 .card {
-  min-height: 350px;
+  min-height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #ddd;
-  margin: 15px auto;
   text-decoration: none;
+  position: relative;
   .card-text {
     display: none;
     padding: 10px 25px;
     background-color: #000;
     color: #FFF;
-    max-width: 75%;
+    width: 85%;
+    @include center;
+    margin: 0;
   }
   &:hover {
     cursor: pointer;
     text-decoration: none;
-    .card-text { 
+    .card-text {
       display: block;
     }
   }

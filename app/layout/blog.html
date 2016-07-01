@@ -18,26 +18,50 @@
 <body style="background-color: #fff">
   <%include src="partials/nav.html"%>
   <%include src="partials/searchbar.html"%>
+  <a href="/resources.html" class="left-vertical-link">
+    r<br>
+    e<br>
+    s<br>
+    o<br>
+    u<br>
+    r<br>
+    c<br>
+    e<br>
+    s</a>
   <div class="container clear-top">
     <div class="text-center">
       <h1>blog</h1>
     </div>
     <section id="posts">
-      <%include src="partials/card.html"%>
-      <%include src="partials/card.html"%>
-      <%include src="partials/card.html"%>
-      <%include src="partials/card.html"%>
-      <%include src="partials/card.html"%>
-      <%include src="partials/card.html"%>
-      <%include src="partials/card.html"%>
-      <%include src="partials/card.html"%>
+      <div class="row">
+        <%include src="partials/card.html"%>
+        <%include src="partials/card.html"%>
+      </div>
+      <div class="row">
+        <%include src="partials/card.html"%>
+        <%include src="partials/card.html"%>
+      </div>
+      <div class="row">
+        <%include src="partials/card.html"%>
+        <%include src="partials/card.html"%>
+      </div>
+      <div class="row">
+        <%include src="partials/card.html"%>
+        <%include src="partials/card.html"%>
+      </div>
     </section>
     <section class="col-xs-12">
       <h2 class="text-center">load more</h2>
     </section>
   </div>
-  <div id="jediBump" style="height: 200px; display: none;">
-    <h1 class="text-center">Jedi Div</h1>
+  <div id="jediDiv">
+    <div class="container">
+      <div class="row"> 
+        <h1 class="text-center">Jedi Div</h1>
+        <%include src="partials/card.html"%>
+        <%include src="partials/card.html"%>
+      </div>
+    </div>
   </div>
 
   <!-- Scripts -->

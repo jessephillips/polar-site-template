@@ -32,12 +32,30 @@
 }
 
 .search {
-  position: absolute;
-  top: 38%;
-  right: 10px;
-  width: 30px;
+  position: fixed;
+  right: -100px;
+  min-width: 200px;
   transform: rotate(90deg);
   .vertical-search {
     width: 200px;
+  }
+}
+
+.left-vertical-link {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+  text-decoration: none;
+}
+
+.right-vertical-link {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 }
