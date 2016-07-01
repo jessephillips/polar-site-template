@@ -34,6 +34,9 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-color: #FFF;
+  &.homepage {
+    background-color: #FFEE79;
+  }
 }
 
 .sidekick-text {
@@ -141,4 +144,5 @@ select:not([multiple]) {
 #jediDiv {
   background-color: #FED525;
   display: none;
+  padding: 15px 0;
 }
