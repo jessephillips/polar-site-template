@@ -177,6 +177,9 @@ textarea {
 .vert-align {
   display: flex;
   align-items: center;
+  @include breakpoint(md) {
+    display: block;
+  }
 }
 
 #mySelect {
