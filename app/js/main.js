@@ -138,9 +138,7 @@ $(document).ready(function () {
   });
 });
 
-/*
-* Sidekick Text Function
-*/
+// Sidekick Text Function
 
 $('.cursor-sidekick').each(function (index, element) {
   var sidekick = `
@@ -166,4 +164,22 @@ $('.cursor-sidekick').each(function (index, element) {
         window.location.href = $(this).data('href');
       }
     });
+});
+
+// searchbar function
+
+$('#searchbar').click(function (event) {
+  console.log(event);
+  $('.search-field').toggleClass('hidden');
+});
+
+$('.close-searchbar').click(function () {
+  $('.search-field').addClass('hidden');
+  $('.search-field__input').focus();
+});
+
+$('.fake-form').click(function (e) {
+  e.preventDefault();
+  $('#contact-form').slideDown();
+  $(this).slideUp();
 });

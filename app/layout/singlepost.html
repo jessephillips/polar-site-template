@@ -17,29 +17,16 @@
 </head>
 <body>
   <%include src="partials/nav.html"%>
-  <%include src="partials/searchbar.html"%>
-  <a href="/resources.html" class="left-vertical-link">
-    r<br>
-    e<br>
-    s<br>
-    o<br>
-    u<br>
-    r<br>
-    c<br>
-    e<br>
-    s</a>
-  <div class="container clear-top">
-    <div class="text-center">
-      <h1>blog</h1>
+  <div class="container-fluid clear-top">
+    <div class="full-post">
+      <div class="full-post__header">
+        <h1>recent post title</h1>
+        <h4>june 20, 2016</h4>
+      </div>
+      <div class="full-post__content">
+        <%include src="partials/content.html"%>
+      </div>
     </div>
-    <section id="posts">
-      <%include src="partials/smallpost.html"%>
-      <%include src="partials/smallpost.html"%>
-      <%include src="partials/smallpost.html"%>
-      <%include src="partials/smallpost.html"%>
-      <%include src="partials/smallpost.html"%>
-      <%include src="partials/smallpost.html"%>
-    </section>
     <section class="col-xs-12">
       <h2 class="text-center">load more</h2>
     </section>

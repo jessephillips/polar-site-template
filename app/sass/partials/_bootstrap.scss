@@ -1,5 +1,6 @@
 .btn {
   padding: 10px 25px;
+  border: 0;
 }
 
 .btn-lg {
@@ -10,4 +11,12 @@
 .row {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.btn-contact {
+  color: #F8D9BA;
+  background-color: white;
+  &:hover {
+    color: darken(#F8D9BA, 10%);
+  }
 }

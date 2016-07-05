@@ -14,13 +14,24 @@
   border: none;
 }
 
+.nav > li > a {
+  text-decoration: none;
+  &:hover, &:active {
+    text-decoration: underline;
+  }
+}
+
+.navbar-brand {
+  text-decoration: none;
+}
+
 .navbar-light {
   &.navbar-default {
     .navbar-brand {
       color: #fff;
     }
     .navbar-nav > li > a {
-    color: #FFF;
+      color: #FFF;
     }
   }
 }

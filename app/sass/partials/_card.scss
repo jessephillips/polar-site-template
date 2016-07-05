@@ -1,17 +1,17 @@
 .card {
-  min-height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ddd;
   text-decoration: none;
   position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
   .card-text {
     display: none;
     padding: 10px 25px;
     background-color: #000;
     color: #FFF;
-    width: 85%;
+    width: 66%;
     @include center;
     margin: 0;
   }

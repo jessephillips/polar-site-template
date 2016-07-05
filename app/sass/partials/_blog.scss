@@ -1,0 +1,37 @@
+.short-post {
+  padding-bottom: 80px;
+  position: relative;
+  &::after {
+    content: '. . .';
+    font-size: 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+  }
+  &__image {
+
+  }
+  &__header {
+    text-align: center;
+  }
+  &__body {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  &__read-more {
+    text-align: center;
+  }
+}
+
+.full-post {
+  &__header {
+    text-align: center;
+  }
+  &__content {
+    p {
+      max-width: 800px;
+      margin: 20px auto;
+    }
+  }
+}

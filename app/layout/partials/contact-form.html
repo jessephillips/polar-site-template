@@ -1,11 +1,16 @@
-<form class="form-horizontal" autocomplete="on">
+<div class="form-group fake-form" style="background-color: rgba(255,255,255, 0.4); padding: 10px 30px;">
+  <span class="fake-form__text">your idea</span>
+</div>
+
+<form id="contact-form" class="form-horizontal" autocomplete="on" style="display: none">
   
   <div class="form-group">
     <div class="col-xs-12">  
       <select class="form-control" id="sel1">
-        <option value="your idea" selected="selected">your idea</option>
-        <option value="building a web app">building a web app</option>
-        <option value="a shiny new wordpress site">a shiny new wordpress site</option>
+        <option value="web app" selected="selected">building a web app</option>
+        <option value="rebrand">rebranding your company</option>
+        <option value="wordpress">a spankin' new wordpress site</option>
+        <option value="lunch">what we ate for lunch</option>
       </select>
     </div>
   </div>
@@ -21,10 +26,10 @@
 
   <div class="col-xs-12">
     <div class="form-group">
-      <textarea class="form-control"></textarea>
+      <textarea class="form-control" rows="5"></textarea>
     </div>
   </div>
 
-  <button class="btn btn-default btn-block">submit</button>
+  <button class="btn btn-contact btn-block form-control">send me!</button>
 
 </form>
