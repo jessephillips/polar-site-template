@@ -89,6 +89,12 @@ img {
 
 .right-align {
   text-align: right;
+  .col-sm-6:first-child {
+    order: 2;
+  }
+  .col-sm-6:last-child {
+    order: 1;
+  }
 }
 
 .img-responsive {
