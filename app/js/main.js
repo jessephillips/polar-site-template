@@ -178,7 +178,7 @@ $('#searchbar').click((event) => {
 $('.search-field')
   .submit((e) => {
     e.preventDefault();
-    console.log($('.search-field__input').val());
+    window.location.search = 's=' + $('.search-field__input').val();
     $('.search-field__input').val('').blur();
   });
 
