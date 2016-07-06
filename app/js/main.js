@@ -60,11 +60,15 @@ function hasScrolled() {
     // scrolling down
 
     $('.navbar-fixed-top').css('top', '-70px');
+    $('.left-vertical-link').css('left', '-30px');
+    $('.right-vertical-link').css('right', '-30px');
   } else if (st + $(window).height() < $(document).height()) {
 
     // scrolling up
 
     $('.navbar-fixed-top').css('top', 0);
+    $('.left-vertical-link').css('left', '30px');
+    $('.right-vertical-link').css('right', '30px');
   }
 
   if (st >= $(document).height() - $(window).innerHeight()) {

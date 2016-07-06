@@ -5,9 +5,9 @@ header {
     font-weight: 900;
     margin: 0px;
     a {
-      &:hover, &:active {
+      &:hover, &:active, &:focus {
         text-decoration: none;
-        color: black;
+        color: #333;
         background-color: white;
       }
     }

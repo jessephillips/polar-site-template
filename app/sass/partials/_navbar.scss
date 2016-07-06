@@ -58,6 +58,12 @@
   transform: translateY(-50%);
   left: 30px;
   text-decoration: none;
+  -webkit-transition: left 0.25s cubic-bezier(0.57, 0.31, 0.57, 0.77);
+  -o-transition: left 0.25s cubic-bezier(0.57, 0.31, 0.57, 0.77);
+  transition: left 0.25s cubic-bezier(0.57, 0.31, 0.57, 0.77);
+  @include breakpoint(lg) {
+    display: none;
+  }
 }
 
 .right-vertical-link {
@@ -65,6 +71,12 @@
   top: 50%;
   transform: translateY(-50%);
   right: 30px;
+  -webkit-transition: right 0.25s cubic-bezier(0.57, 0.31, 0.57, 0.77);
+  -o-transition: right 0.25s cubic-bezier(0.57, 0.31, 0.57, 0.77);
+  transition: right 0.25s cubic-bezier(0.57, 0.31, 0.57, 0.77);
+  @include breakpoint(lg) {
+    display: none;
+  }
   &:hover {
     cursor: pointer;
     text-decoration: underline;
