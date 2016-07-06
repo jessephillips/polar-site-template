@@ -167,7 +167,7 @@ $('.cursor-sidekick').each(function (index, element) {
 // searchbar function
 
 $('#searchbar').click((event) => {
-  $('.search-field').toggleClass('hidden');
+  $('.search-field').removeClass('hidden');
   $('.search-field__input').focus();
 });
 

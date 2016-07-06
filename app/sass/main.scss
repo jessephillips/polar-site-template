@@ -236,6 +236,15 @@ textarea {
   }
 }
 
+.call-to-action {
+  height: 95vh;
+  display: flex;
+  margin-bottom: 30px;
+  .row {
+    background: url('../images/blog-bg.png') center center;
+  }
+}
+
 .text-lg {
   font-size: 5em;
 }
