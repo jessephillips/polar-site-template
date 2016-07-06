@@ -1,5 +1,3 @@
-import _ from 'underscore';
-import moment from 'moment';
 import 'bootstrap-sass';
 
 let didScroll = false;
@@ -168,10 +166,20 @@ $('.cursor-sidekick').each(function (index, element) {
 
 // searchbar function
 
-$('#searchbar').click(function (event) {
-  console.log(event);
+$('#searchbar').click((event) => {
   $('.search-field').toggleClass('hidden');
+  $('.search-field__input').focus();
 });
+
+$('.search-field')
+  .submit((e) => {
+    e.preventDefault();
+    console.log($('.search-field__input').val());
+    $('.search-field__input').val('').blur();
+  });
+
+$('.search-field__input')
+  .blur(() => $('.search-field').addClass('hidden'));
 
 $('.close-searchbar').click(function () {
   $('.search-field').addClass('hidden');
