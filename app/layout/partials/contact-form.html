@@ -1,14 +1,10 @@
-<div class="form-group fake-form" style="background-color: rgba(255,255,255, 0.4); padding: 10px 30px;">
-  <span class="fake-form__text">your idea</span>
-  <div class="triangle--down pull-right"></div>
-</div>
-
-<form id="contact-form" class="form-horizontal" autocomplete="on" style="display: none">
+<form id="contact-form" class="form-horizontal" autocomplete="on">
   
   <div class="form-group">
     <div class="col-xs-12">  
-      <select class="form-control" id="sel1">
-        <option value="web app" selected="selected">building a web app</option>
+      <select class="form-control form-transparent" id="sel1">
+        <option value="your idea" selected="selected">your idea</option>
+        <option value="web app">building a web app</option>
         <option value="rebrand">rebranding your company</option>
         <option value="wordpress">a spankin' new wordpress site</option>
         <option value="lunch">what we ate for lunch</option>
@@ -16,21 +12,24 @@
     </div>
   </div>
 
-  <div class="form-group"> 
-    <div class="col-xs-6">      
-      <input type="text" autocomplete="name" class="form-control" placeholder="your name">
+  <div class="hidden-form">
+    
+    <div class="form-group"> 
+      <div class="col-xs-6">      
+        <input type="text" autocomplete="name" class="form-control" placeholder="your name">
+      </div>
+      <div class="col-xs-6">
+        <input type="email" autocomplete="email" class="form-control" placeholder="your email">
+      </div>
     </div>
-    <div class="col-xs-6">
-      <input type="email" autocomplete="email" class="form-control" placeholder="your email">
+
+    <div class="col-xs-12">
+      <div class="form-group">
+        <textarea class="form-control" placeholder="your message" rows="5"></textarea>
+      </div>
     </div>
+
+    <button class="btn btn-contact btn-block form-control">send me!</button>
+
   </div>
-
-  <div class="col-xs-12">
-    <div class="form-group">
-      <textarea class="form-control" rows="5"></textarea>
-    </div>
-  </div>
-
-  <button class="btn btn-contact btn-block form-control">send me!</button>
-
 </form>

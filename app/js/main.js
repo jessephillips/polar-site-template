@@ -146,20 +146,20 @@ $('.cursor-sidekick').each(function (index, element) {
   var sidekick = `
     <span class="sidekick-text"
       id="sidekick${index}"
-      style="color: ${element.getAttribute('data-color')}">
+      style="color: ${element.getAttribute('data-color')}; display: none;">
       ${element.getAttribute('data-text')}
     </span>`;
 
   $(this)
     .append(sidekick)
     .mouseenter(() => {
-      $('#sidekick' + index).removeClass('hidden');
+      $('#sidekick' + index).css('display', 'block');
     })
     .mouseleave(() => {
-      $('#sidekick' + index).addClass('hidden');
+      $('#sidekick' + index).css('display', 'none');
     })
     .mousemove((e) => {
-      $('#sidekick' + index).css({ top: e.pageY, left: e.pageX + 20 });
+      $('#sidekick' + index).css({ top: e.pageY - $(this).offset().top, left: e.pageX + 20 });
     })
     .click((e) => {
       if (e.target.tagName.toLowerCase() !== 'a') {
@@ -190,8 +190,7 @@ $('.close-searchbar').click(function () {
   $('.search-field__input').focus();
 });
 
-$('.fake-form').click(function (e) {
-  e.preventDefault();
-  $('#contact-form').slideDown();
-  $(this).slideUp();
+$('#sel1').click(function (e) {
+  $(this).removeClass('form-transparent');
+  $('.hidden-form').slideDown();
 });

@@ -36,45 +36,18 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-color: #FFF;
+  color: #000;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+  font-size: 18px;
   &.homepage {
     background-color: #FFEE79;
   }
 }
 
-h1 {
-  font-size: 5em;
-  font-weight: 900;
-}
-
-h2, h3 {
-  font-weight: 900;
-}
-
-h4, h5, h6 {
-  font-weight: bold;
-}
-
-p {
-  font-weight: normal;
-}
-
 img {
   width: 100%;
   height: auto;
-}
-
-.text-normal {
-  font-weight: normal;
-}
-
-.text-bold {
-  font-weight: bold;
-}
-
-.text-superbold {
-  font-weight: 900;
 }
 
 .sidekick-text {
@@ -109,6 +82,7 @@ img {
 .cursor-sidekick {
   display: block;
   position: relative;
+  cursor: pointer;
   width: 100%;
   height: 100%;
 }
@@ -119,12 +93,15 @@ img {
   align-items: center;
 }
 
-.service-list {
+.list {
   background-color: #FFE44D;
   padding: 40px;
   ul {
     li {
       margin-top: 20px;
+      h3 {
+        font-weight: bold;
+      }
     }
   }
 }
@@ -180,7 +157,9 @@ textarea {
   }
   &.dark {
     color: #ffffff;
-    background-color: rgba(0,0,0,0.3)
+    background-color: rgba(0,0,0,0.3);
+    max-width: 90%;
+    margin: 0 auto;
   }
 }
 
@@ -242,22 +221,12 @@ textarea {
 }
 
 .call-to-action {
-  height: 95vh;
+  min-height: 95vh;
   display: flex;
+  padding: 10px;
+  margin-bottom: 15px;
   background: url('../images/blog-bg.png') center center;
-  margin: 15px;
-}
-
-.text-lg {
-  font-size: 5em;
-}
-
-.text-md {
-  font-size: 2em;
-}
-
-.text-sm {
-  font-size: 1em;
+  background-size: cover;
 }
 
 .triangle {
@@ -272,12 +241,16 @@ textarea {
   }
 }
 
-.fake-form {
-  padding: 10px 25px;
-  cursor: pointer;
-  &__text {
-    color: #fff;
-    font-size: 30px;
-    line-height: 34px;
-  }
+.form-transparent {
+  background-color: rgba(255,255,255, 0.4);
+  color: white;
+}
+
+.hidden-form {
+  display: none;
+}
+
+.loadmore {
+  margin: 15px auto;
+  width: 45px;
 }

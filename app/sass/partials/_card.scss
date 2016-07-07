@@ -4,12 +4,11 @@
   align-items: center;
   text-decoration: none;
   position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
   .card-text {
     display: none;
     padding: 10px 25px;
     background-color: #000;
+    font-size: 26px;
     color: #FFF;
     width: 66%;
     @include center;
@@ -21,5 +20,12 @@
     .card-text {
       display: block;
     }
+  }
+}
+
+.quarter-card {
+  &:hover {
+    transform: rotate(-2deg);
+    cursor: pointer;
   }
 }

@@ -52,8 +52,18 @@
   }
 }
 
+.clear-sidenav {
+  padding-left: 36px;
+  padding-right: 36px;
+  @include breakpoint(md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .left-vertical-link {
   position: fixed;
+  z-index: 9990;
   top: 50%;
   transform: translateY(-50%);
   left: 30px;
@@ -61,7 +71,7 @@
   -webkit-transition: left 0.25s cubic-bezier(0.57, 0.31, 0.57, 0.77);
   -o-transition: left 0.25s cubic-bezier(0.57, 0.31, 0.57, 0.77);
   transition: left 0.25s cubic-bezier(0.57, 0.31, 0.57, 0.77);
-  @include breakpoint(lg) {
+  @include breakpoint(md) {
     display: none;
   }
 }
@@ -70,11 +80,12 @@
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 9990;
   right: 30px;
   -webkit-transition: right 0.25s cubic-bezier(0.57, 0.31, 0.57, 0.77);
   -o-transition: right 0.25s cubic-bezier(0.57, 0.31, 0.57, 0.77);
   transition: right 0.25s cubic-bezier(0.57, 0.31, 0.57, 0.77);
-  @include breakpoint(lg) {
+  @include breakpoint(md) {
     display: none;
   }
   &:hover {

@@ -15,3 +15,18 @@
     color: darken(#F8D9BA, 10%);
   }
 }
+
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.container-xl {
+  margin: inherit auto;
+  max-width: 1100px;
+}
+
+.row > * {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
