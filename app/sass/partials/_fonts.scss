@@ -67,4 +67,7 @@ p {
   @include breakpoint(md) {
     font-size: 4em;
   }
+  @include breakpoint(sm) {
+    font-size: 3em;
+  }
 }

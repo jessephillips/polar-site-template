@@ -168,6 +168,14 @@ $('.cursor-sidekick').each(function (index, element) {
     });
 });
 
+$('.image-sources > li').each(function () {
+  $(this).mouseenter(() => {
+    $('#image-target').attr({
+      src: $(this).data('img-src'),
+    });
+  });
+});
+
 // searchbar function
 
 $('#searchbar').click((event) => {

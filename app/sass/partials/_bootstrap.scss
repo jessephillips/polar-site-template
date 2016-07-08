@@ -19,6 +19,10 @@
 .container-fluid {
   padding-left: 30px;
   padding-right: 30px;
+  @include breakpoint (md) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .container-xl {

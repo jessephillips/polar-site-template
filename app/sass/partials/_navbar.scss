@@ -25,6 +25,24 @@
   text-decoration: none;
 }
 
+#myNavbar { 
+  border: 0;
+  ul {
+    li {
+      a {
+        text-align: right;
+      }
+    }
+  }
+.navbar-toggle {
+  border: 0;
+  .icon-bar {
+    background-color: black;
+  }
+}
+}
+
+
 .navbar-light {
   &.navbar-default {
     .navbar-brand {

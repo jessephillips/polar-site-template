@@ -98,7 +98,12 @@ img {
   padding: 40px;
   ul {
     li {
-      margin-top: 20px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-weight: bold;
+      &:hover {
+        cursor: pointer;
+      }
       h3 {
         font-weight: bold;
       }
