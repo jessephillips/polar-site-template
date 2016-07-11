@@ -169,9 +169,16 @@ $('.cursor-sidekick').each(function (index, element) {
 });
 
 $('.image-sources > li').each(function () {
-  $(this).mouseenter(() => {
+  var originalSrc = $('#image-target').attr('src');
+  $(this).data('originalSrc', originalSrc);
+  $(this).mouseover(() => {
     $('#image-target').attr({
       src: $(this).data('img-src'),
+    });
+  })
+  .mouseleave(() => {
+    $('#image-target').attr({
+      src: $(this).data('originalSrc'),
     });
   });
 });
