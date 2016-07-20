@@ -1,5 +1,3 @@
-import 'bootstrap-sass';
-
 (function ($) {
 
   let didScroll = false;
@@ -75,15 +73,11 @@ import 'bootstrap-sass';
 
     if (st >= $(document).height() - $(window).innerHeight()) {
 
-      //not working
-      window.scrollBy(0, -20);
-      $('#jediBump').slideDown();
-
       setTimeout(function () {
         if (st >= $(document).height() - $(window).innerHeight()) {
           $('#jediDiv').slideDown();
         }
-      }, 200);
+      }, 500);
     }
 
     if ($navbarLight.length > 0) {
@@ -195,7 +189,10 @@ import 'bootstrap-sass';
   $('.search-field')
     .submit((e) => {
       e.preventDefault();
-      window.location.search = 's=' + $('.search-field__input').val();
+      let search = $('.search-field__input').val();
+      window.location.assign(
+        window.location.origin + '/?s=' + search
+      );
       $('.search-field__input').val('').blur();
     });
 
