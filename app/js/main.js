@@ -167,7 +167,8 @@
   $('.image-sources > li').each(function () {
     var originalSrc = $('#image-target').attr('src');
     $(this).data('originalSrc', originalSrc);
-    $(this).mouseover(() => {
+    $(this).children('a')
+    .mouseover(() => {
       $('#image-target').attr({
         src: $(this).data('img-src'),
       });
