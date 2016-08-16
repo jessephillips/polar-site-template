@@ -1,5 +1,5 @@
 header {
-  height: 100vh;
+  min-height: 100vh;
   h1 {
     text-align: right;
     margin: 0;
@@ -12,6 +12,17 @@ header {
         background-color: white;
       }
     }
+  }
+
+  &.forest-bg {
+    background-image: url('/images/splash-bg.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .header-logo {
+    max-width: 90%;
+    padding: 15px;
   }
 
   .cursor-sidekick {

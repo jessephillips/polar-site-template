@@ -1,0 +1,104 @@
+.flex {
+  display: flex;
+  &.space {
+    justify-content: space-around;
+    padding: 0px;
+    list-style-type: none;
+  }
+}
+
+.mvp-lights-container {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 300px;
+  @include breakpoint(md) {
+    margin-left: -50px;
+  }
+}
+
+.light {
+  &_top {
+    position: relative;
+    width: 250px;
+    &>img:first-child {
+      position: absolute;
+      width: 250px;
+      z-index: 30;
+    }
+    &>img:last-child {
+      position: absolute;
+      top: 0;
+      width: 250px;
+      z-index: 20;
+      animation: spin 15s infinite;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      //animation-play-state: paused;
+    } 
+  }
+  &_bottom {
+    position: relative;
+    width: 250px;
+    &>img:first-child {
+      position: absolute;
+      width: 250px;
+      z-index: 30;
+    }
+    &>img:last-child {
+      position: absolute;
+      top: 5rem;
+      width: 250px;
+      z-index: 20;
+      animation: spin 15s infinite;
+      animation-direction: reverse;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      //animation-play-state: paused;
+    }
+  }
+  @include breakpoint(md) {
+    &_top {
+      width: 150px;
+      &>img:first-child {
+        width: 150px;
+      }
+      &>img:last-child {
+        width: 150px;
+      }
+    }
+    &_bottom {
+      width: 150px;
+      &>img:first-child {
+        width: 150px;
+      }
+      &>img:last-child {
+        width: 150px;
+      }
+    }
+  }
+}
+
+.animated {
+  animation-play-state: running!important;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.85;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.95;
+  }75% {
+    opacity: 0.9;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}

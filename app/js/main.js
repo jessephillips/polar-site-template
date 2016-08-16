@@ -7,12 +7,23 @@
   let bottomedOut = false;
   let chameleonDivs = [];
   let originalBackground = $('body').css('background');
+  let $body = $(document.body);
+  let bodyHeight = $body.height();
   let $navbar = $('.navbar-default');
   let $navbarLight = $('.navbar-light');
+  let $lights = $('.spinning-light');
 
   let setHeights = function () {
     windowHeight = $(window).innerHeight();
   };
+
+  // // setup the spinning lights
+  // $(window).on('scroll', function () {
+  //   console.log('scroll', st / bodyHeight * 1080);
+  //   $lights.css({
+  //     transform: `rotate(${Math.round($body.scrollTop())}deg)`,
+  //   });
+  // });
 
   /*
   *  Scroll Functions
@@ -51,7 +62,7 @@
     if (Math.abs(lastScrollTop - st) <= 10) {
 
       // didn't scroll far enough, stop function
-
+      // $lights.removeClass('animated');
       return;
     }
 
@@ -59,6 +70,7 @@
 
       // scrolling down
 
+      // $lights.addClass('animated');
       $('.navbar-fixed-top').css('top', '-70px');
       $('.left-vertical-link').css('left', '-30px');
       $('.right-vertical-link').css('right', '-30px');
@@ -66,6 +78,7 @@
 
       // scrolling up
 
+      // $lights.addClass('animated');
       $('.navbar-fixed-top').css('top', 0);
       $('.left-vertical-link').css('left', '30px');
       $('.right-vertical-link').css('right', '30px');
