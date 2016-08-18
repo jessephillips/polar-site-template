@@ -60,14 +60,14 @@ p {
 }
 
 .text-scale {
-  font-size: 7vw;
+  font-size: 8vw;
   @include breakpoint(lg) {
-    font-size: 110px;
+    font-size: 7em;
   }
   @include breakpoint(md) {
-    font-size: 4em;
+    font-size: 4.5em;
   }
   @include breakpoint(sm) {
-    font-size: 3em;
+    font-size: 3.5em;
   }
 }

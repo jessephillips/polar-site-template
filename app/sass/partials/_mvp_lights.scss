@@ -10,26 +10,33 @@
 .mvp-lights-container {
   list-style-type: none;
   display: flex;
+  height: 300px;
   justify-content: space-around;
-  margin-bottom: 300px;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left:auto;
   @include breakpoint(md) {
-    margin-left: -50px;
+    height: 250px;
+    justify-content: center;
+  }
+  @include breakpoint(sm) {
+    height: 200px;
   }
 }
 
 .light {
   &_top {
     position: relative;
-    width: 250px;
+    width: 200px;
     &>img:first-child {
       position: absolute;
-      width: 250px;
+      width: 200px;
       z-index: 30;
     }
     &>img:last-child {
       position: absolute;
       top: 0;
-      width: 250px;
+      width: 200px;
       z-index: 20;
       animation: spin 15s infinite;
       animation-timing-function: linear;
@@ -39,16 +46,16 @@
   }
   &_bottom {
     position: relative;
-    width: 250px;
+    width: 200px;
     &>img:first-child {
       position: absolute;
-      width: 250px;
+      width: 200px;
       z-index: 30;
     }
     &>img:last-child {
       position: absolute;
       top: 5rem;
-      width: 250px;
+      width: 200px;
       z-index: 20;
       animation: spin 15s infinite;
       animation-direction: reverse;
@@ -74,6 +81,28 @@
       }
       &>img:last-child {
         width: 150px;
+        top: 3rem;
+      }
+    }
+  }
+  @include breakpoint(sm) {
+    &_top {
+      width: 100px;
+      &>img:first-child {
+        width: 100px;
+      }
+      &>img:last-child {
+        width: 100px;
+      }
+    }
+    &_bottom {
+      width: 100px;
+      &>img:first-child {
+        width: 100px;
+      }
+      &>img:last-child {
+        width: 100px;
+        top: 2rem;
       }
     }
   }

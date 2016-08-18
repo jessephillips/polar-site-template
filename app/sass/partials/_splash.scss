@@ -1,12 +1,12 @@
 .splash-contact {
   min-height: 100vh;
-  background-image: url('/images/splash-bg.jpg');
-  background-size: cover;
-  background-position: center center;
 }
 
 .align-right {
   text-align: right;
+  @include breakpoint(md) {
+    text-align: left;
+  }
 }
 
 .bg-grey {
@@ -41,10 +41,15 @@
     }
   }
 
+
   .btn-contact {
     background-color: #FFE44D;
     color: #333;
   }
+}
+
+.match-big-text-height {
+  margin-top: 40px
 }
 
 .clear {

@@ -1,3 +1,10 @@
+.forest-bg {
+  background-image: url('/images/splash-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
 header {
   min-height: 100vh;
   h1 {
@@ -14,10 +21,9 @@ header {
     }
   }
 
-  &.forest-bg {
-    background-image: url('/images/splash-bg.jpg');
-    background-size: cover;
-    background-position: center center;
+  &.vert-align {
+    margin-top: -70px;
+    padding-top: 70px;
   }
 
   .header-logo {
@@ -28,6 +34,7 @@ header {
   .cursor-sidekick {
     height: 100vh;
     width: 100vw;
+
   }
 
   &.header-image {

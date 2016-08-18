@@ -112,6 +112,15 @@ img {
       }
     }
   }
+  @include breakpoint(md) {
+    ul{
+      li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 20px;
+      }
+    }
+  }
 }
 
 select:not([multiple]) {
@@ -181,7 +190,7 @@ textarea {
   display: flex;
   align-items: center;
   @include breakpoint(md) {
-    display: block;
+    display: flex;
   }
 }
 
