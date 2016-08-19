@@ -24,11 +24,17 @@ h1 {
 h2 {
   font-weight: 900;
   font-size: 44px;
+  @include breakpoint(sm) {
+    font-size: 30px;
+  }
 }
 
 .h2 {
   font-weight: 900;
   font-size: 44px;
+  @include breakpoint(sm) {
+    font-size: 30px;
+  }
 }
 
 h3 {
@@ -64,6 +70,15 @@ p {
   @include breakpoint(lg) {
     font-size: 7em;
   }
+  @include breakpoint(md) {
+    font-size: 3em;
+  }
+  @include breakpoint(sm) {
+    font-size: 2.5em;
+  }
+}
+
+.text-header {
   @include breakpoint(md) {
     font-size: 4.5em;
   }

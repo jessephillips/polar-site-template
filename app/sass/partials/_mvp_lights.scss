@@ -14,13 +14,17 @@
   justify-content: space-around;
   max-width: 900px;
   margin-right: auto;
-  margin-left:auto;
+  margin-left: auto;
+  padding: 0;
   @include breakpoint(md) {
-    height: 250px;
+    height: 200px;
     justify-content: center;
   }
   @include breakpoint(sm) {
-    height: 200px;
+    height: 125px;
+  }
+  @include breakpoint(xs) {
+    height: 100px;
   }
 }
 
@@ -102,6 +106,27 @@
       }
       &>img:last-child {
         width: 100px;
+        top: 2rem;
+      }
+    }
+  }
+  @include breakpoint(xs) {
+    &_top {
+      width: 80px;
+      &>img:first-child {
+        width: 80px;
+      }
+      &>img:last-child {
+        width: 80px;
+      }
+    }
+    &_bottom {
+      width: 80px;
+      &>img:first-child {
+        width: 80px;
+      }
+      &>img:last-child {
+        width: 80px;
         top: 2rem;
       }
     }

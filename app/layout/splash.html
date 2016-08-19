@@ -58,7 +58,7 @@
   <header class="vert-align cursor-sidekick " data-href="#services" data-text="see our services" data-color="#FFFFFF">
     <div class="row container-fluid">        
       <div class="col-md-6"> 
-        <h1 class="no-underline text-scale text-white">
+        <h1 class="no-underline text-scale text-header text-white">
           we help 
           <a href="#people">people</a> 
 
@@ -67,6 +67,9 @@
           do 
           <a href="">big things.</a>
         </h1>
+        <a href="#services" class="btn btn-default btn-block btn-sidekick text-bold hidden-md hidden-lg">
+          see our services
+        </a>
       </div>
       <div class="col-md-6 hidden-sm hidden-xs">
         <img class="img-responsive" src="/images/border-icons/01.png" alt="">
@@ -75,24 +78,22 @@
   </header>
 
   <main class="container-fluid bg-white">
-    <section style="padding: 100px 0;">
-      <div class="row">
-        <ul class="mvp-lights-container">
-          <li class="light_top">
-            <img src="images/mvp-lights/lights-02-torch.svg" alt="">
-            <img class="spinning-light" src="images/mvp-lights/lights-01-torch.svg" alt="">
-          </li>
-          <li class="light_bottom">
-            <img src="images/mvp-lights/lights-04-lantern.svg" alt="">
-            <img class="spinning-light" src="images/mvp-lights/lights-03-lantern.svg" alt="">
-          </li>
-          <li class="light_top">
-            <img src="images/mvp-lights/lights-06-flashlight.svg" alt="">
-            <img class="spinning-light" src="images/mvp-lights/lights-05-flashlight.svg" alt="">
-          </li> 
-        </ul>
-        <h2 class="text-center container-xl">Let's create a tool that will guide the journey of your business without weighing you down.</h2> 
-      </div>
+    <section class=" pad-section">
+      <ul class="mvp-lights-container">
+        <li class="light_top">
+          <img src="images/mvp-lights/lights-02-torch.svg" alt="">
+          <img class="spinning-light" src="images/mvp-lights/lights-01-torch.svg" alt="">
+        </li>
+        <li class="light_bottom">
+          <img src="images/mvp-lights/lights-04-lantern.svg" alt="">
+          <img class="spinning-light" src="images/mvp-lights/lights-03-lantern.svg" alt="">
+        </li>
+        <li class="light_top">
+          <img src="images/mvp-lights/lights-06-flashlight.svg" alt="">
+          <img class="spinning-light" src="images/mvp-lights/lights-05-flashlight.svg" alt="">
+        </li> 
+      </ul>
+      <h2 class="text-center container-xl">Let's create a tool that will guide the journey of your business without weighing you down.</h2> 
     </section>  
 
     <section class="row" id="services">
@@ -145,12 +146,13 @@
       </div>
     </section>
 
-    <div class="row pad-y-lg">
+    <section class="pad-section">
       <h2 class="text-center margin-auto container-xl">We're a development and design shop that believes beautiful solutions can produce remarkable results.</h2> 
-    </div>
+    </section>
+
   </main>
 
-  <div class="splash-contact clear-top" id="contact">
+  <div class="splash-contact" id="contact">
     <div class='container-fluid row'>
       <div class="col-md-6">
         <h1 class="align-right text-white text-scale">
@@ -162,7 +164,86 @@
           teamwork makes the dream work. let's chat about...
         </h2>
         <div class="splash-form"> 
-          <%include src="partials/contact-form.html"%>
+          <!-- <%include src="partials/contact-form.html"%> -->
+
+          <form class="jotform-form" action="https://submit.jotformpro.com/submit/62315332951956/" method="post" name="form_62315332951956" id="contact-form" accept-charset="utf-8">
+            <input type="hidden" name="formID" value="62315332951956" />
+            <div class="form-all">
+              <ul class="form-section page-section">
+                <li class="form-line jf-required" data-type="control_dropdown" id="id_5">
+                  <label class="form-label form-label-top hidden" id="label_5" for="input_5">
+                    About
+                    <span class="form-required">
+                      *
+                    </span>
+                  </label>
+                  <div id="cid_5" class="form-group jf-required">
+                    <select class="form-control form-transparent" id="input_5" name="q5_about" >
+                      <option value=""> your idea </option>
+                      <option value="building a website"> building a website </option>
+                      <option value="creating an app"> creating an app </option>
+                      <option value="designing a logo"> designing a logo </option>
+                      <option value="buying us coffee ;)"> buying us coffee ;) </option>
+                    </select>
+                  </div>
+                </li>
+
+                <div class="hidden-form">
+                  
+                  <li class="form-line jf-required" data-type="control_textbox" id="id_4">
+                    <label class="form-label form-label-top hidden" id="label_4" for="input_4">
+                      Name
+                      <span class="form-required">
+                        *
+                      </span>
+                    </label>
+                    <div id="cid_4" class="form-group jf-required">
+                      <input type="text" class="form-control validate[required]" data-type="input-textbox" id="input_4" name="q4_name" size="20" value="" placeholder="your name"/>
+                    </div>
+                  </li>
+                  <li class="form-line jf-required" data-type="control_email" id="id_3">
+                    <label class="form-label form-label-top hidden" id="label_3" for="input_3">
+                      Email
+                      <span class="form-required">
+                        *
+                      </span>
+                    </label>
+                    <div id="cid_3" class="form-group jf-required">
+                      <input type="email" class="form-control validate[required, Email]" id="input_3" name="q3_email" size="30" value="" placeholder="your email"/>
+                    </div>
+                  </li>
+                  <li class="form-line jf-required" data-type="control_textarea" id="id_6">
+                    <label class="form-label form-label-top hidden" id="label_6" for="input_6">
+                      Message
+                      <span class="form-required">
+                        *
+                      </span>
+                    </label>
+                    <div id="cid_6" class="form-group jf-required">
+                      <textarea id="input_6" class="form-control validate[required]" name="q6_message" rows="5" placeholder="your message"></textarea>
+                    </div>
+                  </li>
+                  <li class="form-line" data-type="control_button" id="id_2">
+                    <div id="cid_2" class="form-group ">
+                      <div style="text-align:left" class="form-buttons-wrapper">
+                        <button id="input_2" type="submit" class="form-submit-button btn btn-contact btn-block form-control">
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li style="display:none">
+                    Should be Empty:
+                    <input type="text" name="website" value="" />
+                  </li>
+                </div>
+              </ul>
+            </div>
+            <input type="hidden" id="simple_spc" name="simple_spc" value="62315332951956" />
+            <script type="text/javascript">
+            document.getElementById("si" + "mple" + "_spc").value = "62315332951956-62315332951956";
+            </script>
+          </form>
         </div>
       </div>
     </div>

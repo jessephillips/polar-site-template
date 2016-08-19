@@ -49,7 +49,10 @@
 }
 
 .match-big-text-height {
-  margin-top: 40px
+  margin-top: 40px;
+  @include breakpoint(sm) {
+    margin-top: 10px;
+  }
 }
 
 .clear {

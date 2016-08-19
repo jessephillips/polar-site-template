@@ -83,11 +83,17 @@
 }
 
 .pad-y-lg {
-  padding: 40px 0px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .pad-section {
-  padding: 80px 20px; 
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include breakpoint(sm) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 a {
