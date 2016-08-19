@@ -223,4 +223,25 @@
     $('.hidden-form').slideDown();
   });
 
+  $.preloadImages = function () {
+    for (var i = 0; i < arguments.length; i++) {
+      $('<img />').attr('src', 'images/services/services-' + arguments[i] + '.png');
+    }
+  };
+
+  $.preloadImages(
+    'a-b-testing',
+    'app-design',
+    'app-development',
+    'art-direction',
+    'graphic-design',
+    'illustration',
+    'information-architecture',
+    'logo-design',
+    'user-experience',
+    'web-design',
+    'web-development',
+    'website-optimization',
+    'wireframing');
+
 })(jQuery);
