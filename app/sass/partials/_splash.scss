@@ -2,11 +2,31 @@
   min-height: 100vh;
 }
 
+.splash-header {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
 .align-right {
   text-align: right;
   @include breakpoint(md) {
     text-align: left;
   }
+}
+
+.pad-main-section {
+  @include breakpoint(sm) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+.navbar-splash {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .bg-grey {
@@ -28,16 +48,16 @@
   .form-control {
     color: #333;
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      color: #e6e6e6;
+      color: #666;
     }
     &::-moz-placeholder { /* Firefox 19+ */
-      color: #e6e6e6;
+      color: #666;
     }
     &:-ms-input-placeholder { /* IE 10+ */
-      color: #e6e6e6;
+      color: #666;
     }
     &:-moz-placeholder { /* Firefox 18- */
-      color: #e6e6e6;
+      color: #666;
     }
   }
 
@@ -49,7 +69,10 @@
 }
 
 .match-big-text-height {
-  margin-top: 40px;
+  margin-top: 66px;
+  @include breakpoint(xl) {
+    margin-top: 40px;
+  }
   @include breakpoint(sm) {
     margin-top: 10px;
   }

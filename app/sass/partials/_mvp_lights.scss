@@ -7,10 +7,17 @@
   }
 }
 
+.mvp-lights-text {
+  @include breakpoint(sm) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 .mvp-lights-container {
   list-style-type: none;
   display: flex;
-  height: 300px;
+  height: 250px;
   justify-content: space-around;
   max-width: 900px;
   margin-right: auto;

@@ -78,6 +78,11 @@
   text-align: center;
 }
 
+.no-margin {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .pad {
   padding: 15px;
 }
@@ -91,8 +96,8 @@
   padding-top: 80px;
   padding-bottom: 80px;
   @include breakpoint(sm) {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
