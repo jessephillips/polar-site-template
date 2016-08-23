@@ -74,12 +74,19 @@ img {
 
 .right-align {
   text-align: right;
+  // skeleton boys on the home page
   .col-sm-6:first-child {
     order: 2;
   }
   .col-sm-6:last-child {
     order: 1;
   }
+}
+
+.center-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .img-responsive {
@@ -204,9 +211,14 @@ textarea {
   }
 }
 
+.form-button-error {
+  color: #fff;
+}
+
 .no-underline {
   a {
     text-decoration: none;
+    cursor: default;
   }
 }
 
