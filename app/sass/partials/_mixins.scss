@@ -50,12 +50,9 @@
   z-index: 99;
   border-color: $color;
   transform: translateX(-50%) rotate(45deg);
-  -ms-transform: translateX(-50%) rotate(45deg);
-  /* IE */
-  -moz-transform: translateX(-50%) rotate(45deg);
-  /* Firefox */
-  -webkit-transform: translateX(-50%) rotate(45deg);
-  /* Safari and Chrome */
+  -ms-transform: translateX(-50%) rotate(45deg); /* IE */
+  -moz-transform: translateX(-50%) rotate(45deg); /* Firefox */
+  -webkit-transform: translateX(-50%) rotate(45deg); /* Safari and Chrome */
  
 }
 
