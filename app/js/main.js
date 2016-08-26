@@ -139,6 +139,16 @@
 
       chameleonDivs.push(new ChameleonObject(this));
     });
+
+    // If thanks redirect -- replace form with text
+    if (window.location.hash === '#contact?thanks=true') {
+      $('#contact-form').html(
+        `<h2 class="text-white match-big-text-height">
+          Thanks! Your message has been sent, and we can’t wait to read it. We’ll be in touch soon.
+        </h2>`
+      );
+      $(window).scrollTop($('#contact').offset().top);
+    }
   });
 
   if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
@@ -168,7 +178,13 @@
         })
         .click((e) => {
           if (e.target.tagName.toLowerCase() !== 'a') {
-            window.location.href = $(this).data('href');
+            var target = $(this).data('href');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: $(target).offset().top,
+              }, 1000);
+              return false;
+            }
           }
         });
     });
@@ -240,5 +256,23 @@
     'web-development',
     'website-optimization',
     'wireframing');
+
+  // Smooth Scroll
+  $(function () {
+    $('a[href*="#"]:not([href="#"])').click(function () {
+      if (
+        location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') &&
+        location.hostname === this.hostname) {
+        var $target = $(this.hash);
+        $target = $target.length ? $target : $('[name=' + this.hash.slice(1) + ']');
+        if ($target.length) {
+          $('html, body').animate({
+            scrollTop: $target.offset().top,
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
 
 })(jQuery);
