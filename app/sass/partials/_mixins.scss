@@ -12,11 +12,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);  
-  -ms-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%);
   /* IE */
-  -moz-transform: translateX(-50%) rotate(45deg);
+  -moz-transform: translate(-50%, -50%);
   /* Firefox */
-  -webkit-transform: translateX(-50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%);
   /* Safari and Chrome */
 }
 
@@ -50,12 +50,9 @@
   z-index: 99;
   border-color: $color;
   transform: translateX(-50%) rotate(45deg);
-  -ms-transform: translateX(-50%) rotate(45deg);
-  /* IE */
-  -moz-transform: translateX(-50%) rotate(45deg);
-  /* Firefox */
-  -webkit-transform: translateX(-50%) rotate(45deg);
-  /* Safari and Chrome */
+  -ms-transform: translateX(-50%) rotate(45deg); /* IE */
+  -moz-transform: translateX(-50%) rotate(45deg); /* Firefox */
+  -webkit-transform: translateX(-50%) rotate(45deg); /* Safari and Chrome */
  
 }
 
@@ -66,7 +63,10 @@
 }
 
 @mixin breakpoint($point) {
-  @if $point == lg {
+  @if $point == xl {
+    @media (max-width: 1200px) { @content; }
+  }
+  @else if $point == lg {
     @media (max-width: 991px) { @content; }
   }
   @else if $point == md {

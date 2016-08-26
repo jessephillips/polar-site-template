@@ -4,6 +4,10 @@
   background-size: cover;
 }
 
+.bg-white {
+  background-color: white;
+}
+
 .background-md {
   height: 600px;
   min-height: 80vh;
@@ -27,6 +31,12 @@
 
 .container-lg {
   max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-xl {
+  max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -68,16 +78,27 @@
   text-align: center;
 }
 
+.no-margin {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .pad {
   padding: 15px;
 }
 
 .pad-y-lg {
-  padding: 40px 0px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .pad-section {
-  padding: 80px 20px; 
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include breakpoint(sm) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 a {

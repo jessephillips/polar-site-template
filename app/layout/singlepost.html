@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+
+  <title>Greetings</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <%include src="partials/nav.html"%>
+  <div class="container-fluid clear-top">
+    <div class="full-post">
+      <div class="full-post__header">
+        <h1>recent post title</h1>
+        <h4>june 20, 2016</h4>
+      </div>
+      <div class="full-post__content">
+        <%include src="partials/content.html"%>
+      </div>
+    </div>
+    <section class="col-xs-12">
+      <h2 class="text-center">load more</h2>
+    </section>
+  </div>
+  <%include src="partials/jedi.html"%>
+  <%include src="partials/footer.html"%>
+</body>

@@ -1,0 +1,165 @@
+.flex {
+  display: flex;
+  &.space {
+    justify-content: space-around;
+    padding: 0px;
+    list-style-type: none;
+  }
+}
+
+.mvp-lights-text {
+  @include breakpoint(sm) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.mvp-lights-container {
+  list-style-type: none;
+  display: flex;
+  height: 250px;
+  justify-content: space-around;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  @include breakpoint(md) {
+    height: 200px;
+    justify-content: center;
+  }
+  @include breakpoint(sm) {
+    height: 125px;
+  }
+  @include breakpoint(xs) {
+    height: 100px;
+  }
+}
+
+.light {
+  &_top {
+    position: relative;
+    width: 200px;
+    &>img:first-child {
+      position: absolute;
+      width: 200px;
+      z-index: 30;
+    }
+    &>img:last-child {
+      position: absolute;
+      top: 0;
+      width: 200px;
+      z-index: 20;
+      animation: spin 15s infinite;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      //animation-play-state: paused;
+    } 
+  }
+  &_bottom {
+    position: relative;
+    width: 200px;
+    &>img:first-child {
+      position: absolute;
+      width: 200px;
+      z-index: 30;
+    }
+    &>img:last-child {
+      position: absolute;
+      top: 5rem;
+      width: 200px;
+      z-index: 20;
+      animation: spin 15s infinite;
+      animation-direction: reverse;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      //animation-play-state: paused;
+    }
+  }
+  @include breakpoint(md) {
+    &_top {
+      width: 150px;
+      &>img:first-child {
+        width: 150px;
+      }
+      &>img:last-child {
+        width: 150px;
+      }
+    }
+    &_bottom {
+      width: 150px;
+      &>img:first-child {
+        width: 150px;
+      }
+      &>img:last-child {
+        width: 150px;
+        top: 3rem;
+      }
+    }
+  }
+  @include breakpoint(sm) {
+    &_top {
+      width: 100px;
+      &>img:first-child {
+        width: 100px;
+      }
+      &>img:last-child {
+        width: 100px;
+      }
+    }
+    &_bottom {
+      width: 100px;
+      &>img:first-child {
+        width: 100px;
+      }
+      &>img:last-child {
+        width: 100px;
+        top: 2rem;
+      }
+    }
+  }
+  @include breakpoint(xs) {
+    &_top {
+      width: 80px;
+      &>img:first-child {
+        width: 80px;
+      }
+      &>img:last-child {
+        width: 80px;
+      }
+    }
+    &_bottom {
+      width: 80px;
+      &>img:first-child {
+        width: 80px;
+      }
+      &>img:last-child {
+        width: 80px;
+        top: 2rem;
+      }
+    }
+  }
+}
+
+.animated {
+  animation-play-state: running!important;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.85;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.95;
+  }75% {
+    opacity: 0.9;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}

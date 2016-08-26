@@ -1,6 +1,42 @@
+.forest-bg {
+  background-image: url('/images/splash-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
 header {
-  .header-image {
-    padding-top: 15px;
-    background-image: url(../images/doug.jpeg);
+  min-height: 100vh;
+  h1 {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    a {
+      padding: 0 5px 5px 5px;
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+        color: #000;
+        background-color: white;
+      }
+    }
+  }
+
+  .header-logo {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .cursor-sidekick {
+    height: 100vh;
+    width: 100vw;
+
+  }
+
+  &.header-image {
+    &.greetings {
+      background-image: url('/images/greetings.png');
+      background-size: cover;
+      background-position: center center;
+    }
   }
 }

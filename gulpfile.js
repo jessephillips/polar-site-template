@@ -4,7 +4,6 @@ var source      = require('vinyl-source-stream');
 var buffer      = require('vinyl-buffer');
 var browserify  = require('browserify');
 var babel       = require('babelify');
-var bourbon     = require('bourbon');
 var sass        = require('gulp-sass');
 var plumber     = require('gulp-plumber');
 var notify      = require('gulp-notify');
@@ -74,7 +73,7 @@ gulp.task('browserify', function() {
     .pipe(source('./main.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/js'));
 });
@@ -145,6 +144,7 @@ gulp.task('watch', function() {
 gulp.task('server', ['default'], function () {
   return gulp.src('dist')
     .pipe(server({
+      port: 8000,
       livereload: true
     }));
 });

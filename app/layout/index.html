@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
+<body class="homepage">
   <!--[if lte IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong>
       browser. Please
@@ -23,24 +23,76 @@
       improve your experience.</p>
   <![endif]-->
 
-  <div id="wrapper" class="toggled">
-    <div id="page_content_wrapper">
-      <%include src="partials/nav.html"%>
-      <%include src="partials/header.html"%>
-      <div class="container">
-        <%include src="partials/modal.html"%>
-        <%include src="partials/article.html"%>
-        <%include src="partials/footer.html"%>
+
+  <%include src="partials/nav.html"%>
+  <%include src="partials/header.html"%>
+
+  <div class="container-fluid">
+    <section class="chameleon container-lg" data-background="#FFFFFF" data-type="color" style="padding: 300px 0;">
+      <div class="row">
+        <ul class="flex space">
+          <li>picture</li>
+          <li>picture</li>
+          <li>picture</li> 
+        </ul>
+        <h3 class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni cum vero, hic recusandae esse.</h3>
       </div>
-    </div>
+    </section>  
+
+    <section class="phase chameleon right-align cursor-sidekick" data-background="#F8D9BA" data-type="color" data-href="#" data-text="cool skeleton man">
+      <div class="row vert-align">
+        <div class="col-sm-6">
+          <img class="img-responsive" src="/images/skeleton.gif" alt="">
+        </div>
+        <div class="col-sm-6">
+          <h2 class="text-scale">The Plan</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quibusdam quas eveniet placeat quo quod deleniti, dolorem aspernatur possimus ex ut voluptas consectetur, neque sunt ducimus harum eos ab perferendis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, ut incidunt ipsa iure sed neque, tempore, quam similique est facilis deserunt cupiditate rem libero placeat explicabo fuga architecto dignissimos harum.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="phase chameleon cursor-sidekick" data-background="#D1E2EC" data-type="color"  data-href="#" data-text="cool skeleton man">
+      <div class="row vert-align">      
+        <div class="col-sm-6">
+          <img class="img-responsive" src="/images/skeleton.gif" alt="">
+        </div>
+        <div class="col-sm-6">
+          <h2 class="text-scale">The Project</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quibusdam quas eveniet placeat quo quod deleniti, dolorem aspernatur possimus ex ut voluptas consectetur, neque sunt ducimus harum eos ab perferendis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, ut incidunt ipsa iure sed neque, tempore, quam similique est facilis deserunt cupiditate rem libero placeat explicabo fuga architecto dignissimos harum.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="phase chameleon right-align cursor-sidekick" data-background="#FFF3A1" data-type="color" data-color="#fff" data-href="#" data-text="cool skeleton man">
+      <div class="row vert-align">        
+        <div class="col-sm-6">
+          <img class="img-responsive" src="/images/skeleton.gif" alt="">
+        </div>
+        <div class="col-sm-6">
+          <h2 class="text-scale">The Post</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quibusdam quas eveniet placeat quo quod deleniti, dolorem aspernatur possimus ex ut voluptas consectetur, neque sunt ducimus harum eos ab perferendis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, ut incidunt ipsa iure sed neque, tempore, quam similique est facilis deserunt cupiditate rem libero placeat explicabo fuga architecto dignissimos harum.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="chameleon phase container-lg" data-background="#FFFFFF" data-type="color">
+      <div class="row">   
+        <div class="col-sm-12 text-center">
+          <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam doloribus.</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="call-to-action vert-align chameleon" data-background="#ffffff" data-type="color">
+      <div class="text-center container-md margin-auto">
+        <h2 class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptatibus suscipit eligendi saepe harum perferendis dolorem beatae amet?</h2>
+        <input type="text" class="form-control dark">
+      </div>
+    </section>
+
   </div>
 
-
-  <!-- Scripts -->
-  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>  
-  <script src="js/main.js" async="async"></script>
-  <script>
-    //google analytics
-  </script>
+  <%include src="partials/jedi.html"%>
+  <%include src="partials/footer.html"%>
 </body>
 </html>

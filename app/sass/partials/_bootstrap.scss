@@ -1,8 +1,40 @@
 .btn {
   padding: 10px 25px;
+  border: 0;
 }
 
 .btn-lg {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.btn-contact {
+  color: #F8D9BA;
+  background-color: white;
+  &:hover {
+    color: darken(#F8D9BA, 10%);
+  }
+}
+
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+  @include breakpoint (md) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.container-xl {
+  margin: inherit auto;
+  max-width: 1100px;
+}
+
+.row > * {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  @include breakpoint(md) {
+    padding-top: 8px;
+    padding-bottom: 8px;  
+  }
 }

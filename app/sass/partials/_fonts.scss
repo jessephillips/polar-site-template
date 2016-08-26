@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.otf') format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.otf') format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Black.otf') format("opentype");
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: 900;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 44px;
+  @include breakpoint(sm) {
+    font-size: 30px;
+  }
+}
+
+.h2 {
+  font-weight: 900;
+  font-size: 44px;
+  @include breakpoint(sm) {
+    font-size: 30px;
+  }
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4, h5, h6 {
+  font-weight: bold;
+}
+
+p {
+  font-weight: normal;
+}
+
+.lead {
+  font-size: 28px;
+}
+
+.text-normal {
+  font-weight: normal;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-superbold {
+  font-weight: 900;
+}
+
+.text-scale {
+  font-size: 8vw;
+  @include breakpoint(lg) {
+    font-size: 7em;
+  }
+  @include breakpoint(md) {
+    font-size: 3em;
+  }
+  @include breakpoint(sm) {
+    font-size: 2.5em;
+  }
+}
+
+.text-header {
+  @include breakpoint(md) {
+    font-size: 4.5em;
+  }
+  @include breakpoint(sm) {
+    font-size: 3.5em;
+  }
+}
